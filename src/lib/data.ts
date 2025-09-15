@@ -1,4 +1,4 @@
-import { Github, Linkedin, Briefcase, GraduationCap } from 'lucide-react';
+import { Briefcase, GraduationCap, Github, Linkedin } from 'lucide-react';
 
 export const NAV_LINKS = [
   { name: 'About', href: '#about' },
@@ -14,66 +14,66 @@ export const SOCIAL_LINKS = [
   { name: 'GitHub', href: 'https://github.com/imusmangujjer', icon: Github },
 ];
 
-export const RESUME_URL = '/usman-gujjer-resume.pdf'; // Placeholder
+export const RESUME_URL = '/muhammad-usman-resume.pdf'; // Placeholder
 
 export const USER_DETAILS = {
-  name: 'Usman Gujjer',
-  tagline: 'Transforming data into actionable insights and automating intelligence.',
+  name: 'Muhammad Usman',
+  tagline: 'Decision Support Analyst with expertise in data visualization, KPI development, and AI automation.',
   roles: [
-    'Business Analyst',
-    'AI Automation Expert',
-    'Marketing Analyst',
-    'Financial Analyst',
+    'Decision Support Analyst',
+    'AI Automation Strategist',
+    'Business Intelligence Analyst',
     'Data Analyst',
-    'Operations Manager',
   ],
-  bio: "I'm a versatile and results-oriented professional with a strong foundation in data analysis, business intelligence, and AI-driven automation. My expertise lies in translating complex data into strategic insights, optimizing business processes, and building intelligent systems that drive growth and efficiency. I'm passionate about leveraging technology to solve real-world problems and deliver measurable value.",
+  bio: "I am a Decision Support Analyst with hands-on experience in data visualization, KPI development, and commercial insights generation. Skilled in Power BI, Excel, Tableau, and SQL, I am adept at collecting and cleaning data, preparing dashboards, and presenting clear, actionable findings for medical and leadership support teams. I am detail-oriented, collaborative, and driven by a continuous learning mindset with experience of PHIPA and global healthcare analysis exposure, and have a growing expertise as an AI Automation Strategist.",
   skills: {
-    'Business Intelligence': ['Tableau', 'Power BI', 'Qlik Sense', 'Data Warehousing', 'ETL Processes'],
-    'Data Science & AI': ['Python (Pandas, NumPy, Scikit-learn)', 'R', 'Machine Learning', 'Natural Language Processing', 'SQL'],
-    'Marketing & Finance': ['Google Analytics', 'Financial Modeling', 'Market Research', 'A/B Testing'],
-    'Operations & Tools': ['Excel', 'Salesforce', 'Jira', 'Git & GitHub'],
+    'Programming': ['Python', 'SQL Server', 'MySQL'],
+    'Analytics': ['ML Models', 'Statistical Analysis', 'Ad hoc Analysis', 'Report writing', 'Impact analysis'],
+    'Tools': ['Microsoft Excel', 'Power BI', 'PowerPoint', 'Tableau', 'Market Insights', 'Azure', 'AWS', 'GCP'],
+    'Data Engineering': ['ETL Pipelines', 'Manipulating Data', 'Data Quality', 'Data Requirements', 'Medical coding'],
+    'Healthcare Analytics': ['Decision Support', 'Advanced Statistical Analysis', 'Performance Indicators', 'Quality Improvement', 'Simulation Software', 'Preparing Reports', 'Health Policy', 'Benchmarking', 'Finance', 'SPSS'],
+    'Business': ['Consistent', 'Ability to prioritize', 'Attention to Detail', 'Reliability', 'Creative', 'Project Planning'],
   },
   experience: [
     {
+      role: 'Inventory Management Associate',
+      company: '7-Eleven Inc, Windsor, Ontario, Canada',
+      period: '2024 - Present',
+      description: 'Provided exceptional customer service in a fast-paced retail environment. Managed cash register operations, including sales, returns, and daily reconciliation. Monitored inventory levels and restocked shelves.',
+      icon: Briefcase,
+    },
+    {
       role: 'Business Intelligence Analyst',
-      company: 'Innovate Solutions',
-      period: '2021 - Present',
-      description: 'Developed and maintained BI dashboards and reports to track key performance indicators. Performed data analysis to identify trends and provide actionable insights for various departments. Collaborated with stakeholders to understand business requirements and deliver data-driven solutions.',
+      company: 'DotNow Private Limited, Lahore, Punjab, Pakistan',
+      period: '2020 - 2023',
+      description: 'Performed end-to-end data analysis to guide customer engagement decisions. Delivered BI dashboards reducing report preparation time by 35%. Used SQL automation to cut monthly data processing time from 6 hours to 1 hour.',
       icon: Briefcase,
     },
     {
-      role: 'AI Automation Expert',
-      company: 'Automate Forward',
-      period: '2019 - 2021',
-      description: 'Designed and implemented AI-powered automation workflows to streamline business operations. Utilized machine learning models for predictive analysis and process optimization. Reduced manual effort by 40% in key operational areas.',
-      icon: Briefcase,
-    },
-    {
-      role: 'Data Analyst Intern',
-      company: 'Data Insights Co.',
-      period: 'Summer 2018',
-      description: 'Assisted senior analysts with data cleaning, wrangling, and visualization. Contributed to a major market research project by analyzing customer survey data.',
+      role: 'Junior Business Analyst',
+      company: 'LondonITPros, Lahore, Punjab, Pakistan',
+      period: '2019 - 2020',
+      description: 'Conducted requirement gathering and data analysis to support decision-making and improve business processes. Prepared reports and presentations to communicate project updates and key insights to management.',
       icon: Briefcase,
     },
   ],
   education: [
     {
-      degree: 'Master of Science in Data Science',
-      institution: 'University of Technology',
-      period: '2017 - 2019',
-      description: 'Specialized in machine learning, big data technologies, and statistical analysis.',
+      degree: 'Post Graduate Certificate: Data Analytics for Business',
+      institution: 'St. Clair College, Windsor, ON, Canada',
+      period: '2023 - 2025',
+      description: 'GPA: 4.0',
       icon: GraduationCap,
     },
     {
-      degree: 'Bachelor of Business Administration',
-      institution: 'City Business School',
-      period: '2013 - 2017',
-      description: 'Focused on finance and marketing analytics.',
+      degree: 'Bachelor of Science (Hons.): Computer Science',
+      institution: 'Bahauddin Zakariya University, Multan - Punjab, Pakistan',
+      period: '2015 - 2019',
+      description: 'GPA: 3.78',
       icon: GraduationCap,
     },
   ],
   contact: {
-    email: 'usman.gujjer@example.com', // Placeholder
+    email: 'usmangujjer025@gmail.com',
   }
 };
