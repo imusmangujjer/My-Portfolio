@@ -14,14 +14,12 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <div className="container">
-          <About />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Education />
-          <Contact />
-        </div>
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
+        <Contact />
       </main>
       <Footer />
     </div>

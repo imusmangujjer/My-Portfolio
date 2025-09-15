@@ -60,32 +60,34 @@ export function Projects() {
 
   return (
     <SectionWrapper id="projects">
-      <SectionHeader title="Projects" subtitle="Some of my recent work on GitHub" />
-      {error && (
-        <Alert variant="destructive" className="mb-8">
-            <Terminal className="h-4 w-4" />
-            <AlertTitle>Error Fetching Projects</AlertTitle>
-            <AlertDescription>{error}</AlertDescription>
-        </Alert>
-      )}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {loading ? (
-          Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="flex flex-col space-y-3 rounded-lg border bg-card p-6">
-              <div className="space-y-2">
-                <Skeleton className="h-4 w-3/4" />
-                <Skeleton className="h-4 w-1/2" />
-              </div>
-               <Skeleton className="h-[100px] w-full" />
-              <div className="flex justify-between">
-                <Skeleton className="h-8 w-1/4" />
-                 <Skeleton className="h-8 w-1/4" />
-              </div>
-            </div>
-          ))
-        ) : (
-          repos.map(repo => <ProjectCard key={repo.id} repo={repo} />)
+      <div className="container">
+        <SectionHeader title="Projects" subtitle="Some of my recent work on GitHub" />
+        {error && (
+          <Alert variant="destructive" className="mb-8">
+              <Terminal className="h-4 w-4" />
+              <AlertTitle>Error Fetching Projects</AlertTitle>
+              <AlertDescription>{error}</AlertDescription>
+          </Alert>
         )}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {loading ? (
+            Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="flex flex-col space-y-3 rounded-lg border bg-card p-6">
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-3/4" />
+                  <Skeleton className="h-4 w-1/2" />
+                </div>
+                 <Skeleton className="h-[100px] w-full" />
+                <div className="flex justify-between">
+                  <Skeleton className="h-8 w-1/4" />
+                   <Skeleton className="h-8 w-1/4" />
+                </div>
+              </div>
+            ))
+          ) : (
+            repos.map(repo => <ProjectCard key={repo.id} repo={repo} />)
+          )}
+        </div>
       </div>
     </SectionWrapper>
   );
