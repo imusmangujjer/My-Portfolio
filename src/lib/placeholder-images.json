@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "user-portrait",
+      "description": "A portrait of Usman Gujjer",
+      "imageUrl": "https://picsum.photos/seed/user-portrait/400/400",
+      "imageHint": "professional man portrait"
+    }
+  ]
 }
