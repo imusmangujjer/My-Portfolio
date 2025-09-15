@@ -4,20 +4,17 @@ import { SectionHeader } from './section-header';
 import { USER_DETAILS } from '@/lib/data';
 
 export function About() {
-  const userImage = { imageUrl: 'https://picsum.photos/seed/user-portrait/400/400', imageHint: 'professional man portrait' };
-  
   return (
     <SectionWrapper id="about">
       <SectionHeader title="About Me" subtitle="A little bit about my journey" />
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-3">
         <div className="relative mx-auto h-64 w-64 shadow-lg rounded-full md:h-80 md:w-80">
           <Image
-            src={userImage.imageUrl}
+            src="/profile.png"
             alt="Usman Gujjer"
             width={320}
             height={320}
             className="rounded-full object-cover"
-            data-ai-hint={userImage.imageHint}
           />
         </div>
         <div className="md:col-span-2">
