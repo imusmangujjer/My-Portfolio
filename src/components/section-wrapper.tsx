@@ -41,7 +41,7 @@ export function SectionWrapper({ children, id, className }: SectionWrapperProps)
       id={id}
       ref={ref}
       className={cn(
-        "container py-16 md:py-24 transition-all duration-700 ease-out",
+        "py-16 md:py-24 transition-all duration-700 ease-out",
         isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
         className
       )}
