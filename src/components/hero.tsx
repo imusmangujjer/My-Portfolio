@@ -7,7 +7,7 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section id="home" className="relative h-[calc(100vh-10rem)] w-full">
-      <div className="flex h-full flex-col items-center justify-center text-center">
+      <div className="container flex h-full flex-col items-center justify-center text-center">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="block text-muted-foreground">I'm a</span>
           <span className="block min-h-[1.2em]">

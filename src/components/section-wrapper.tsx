@@ -46,7 +46,9 @@ export function SectionWrapper({ children, id, className }: SectionWrapperProps)
         className
       )}
     >
-      {children}
+      <div className="container">
+        {children}
+      </div>
     </section>
   );
 }
