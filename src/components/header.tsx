@@ -9,41 +9,43 @@ import { NAV_LINKS, SOCIAL_LINKS, RESUME_URL, USER_DETAILS } from '@/lib/data';
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center justify-between">
-        {/* Left side: Name and Desktop Nav */}
-        <div className="flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">{USER_DETAILS.name}</span>
-          </Link>
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.name}
+      <div className="container flex h-14 items-center">
+        <div className="flex w-full items-center justify-between">
+            {/* Left side: Name and Desktop Nav */}
+            <div className="flex items-center">
+              <Link href="/" className="mr-6 flex items-center space-x-2">
+                <span className="font-bold">{USER_DETAILS.name}</span>
               </Link>
-            ))}
-          </nav>
-        </div>
+              <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+                {NAV_LINKS.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
+            </div>
 
-        {/* Right side: Social Links and Resume Button (Desktop) */}
-        <div className="hidden md:flex items-center space-x-2">
-          {SOCIAL_LINKS.map((link) => (
-            <Button key={link.name} variant="ghost" size="icon" asChild>
-              <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                <link.icon className="h-4 w-4" />
-              </a>
-            </Button>
-          ))}
-          <Button asChild>
-            <a href={RESUME_URL} download>Download Resume</a>
-          </Button>
+            {/* Right side: Social Links and Resume Button (Desktop) */}
+            <div className="hidden md:flex items-center space-x-2">
+              {SOCIAL_LINKS.map((link) => (
+                <Button key={link.name} variant="ghost" size="icon" asChild>
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
+                    <link.icon className="h-4 w-4" />
+                  </a>
+                </Button>
+              ))}
+              <Button asChild>
+                <a href={RESUME_URL} download>Download Resume</a>
+              </Button>
+            </div>
         </div>
 
         {/* Mobile Menu */}
-        <div className="md:hidden">
+        <div className="ml-auto flex items-center md:hidden">
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
