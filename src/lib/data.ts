@@ -24,6 +24,8 @@ export const USER_DETAILS = {
     'AI Automation Strategist',
     'Business Intelligence Analyst',
     'Data Analyst',
+    'Financial Analyst',
+    'Marketing Analyst',
   ],
   bio: "I am a Decision Support Analyst with hands-on experience in data visualization, KPI development, and commercial insights generation. Skilled in Power BI, Excel, Tableau, and SQL, I am adept at collecting and cleaning data, preparing dashboards, and presenting clear, actionable findings for medical and leadership support teams. I am detail-oriented, collaborative, and driven by a continuous learning mindset with experience of PHIPA and global healthcare analysis exposure, and have a growing expertise as an AI Automation Strategist.",
   skills: {

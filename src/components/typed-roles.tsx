@@ -12,14 +12,18 @@ const textColors = [
     'text-sky-400',
     'text-purple-500',
     'text-red-500',
-    'text-green-500'
+    'text-green-500',
+    'text-yellow-500',
+    'text-orange-500',
 ];
 
 const ringColors = [
     'ring-sky-400',
     'ring-purple-500',
     'ring-red-500',
-    'ring-green-500'
+    'ring-green-500',
+    'ring-yellow-500',
+    'ring-orange-500',
 ];
 
 export function TypedRoles({ roles, onColorChange }: TypedRolesProps) {
