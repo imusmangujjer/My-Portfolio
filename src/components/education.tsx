@@ -5,7 +5,7 @@ import { USER_DETAILS } from '@/lib/data';
 
 export function Education() {
   return (
-    <SectionWrapper id="education" className="bg-muted/50">
+    <SectionWrapper id="education">
       <SectionHeader title="Education" subtitle="My academic background" />
       <div className="grid gap-8 md:grid-cols-2">
         {USER_DETAILS.education.map((item) => (
