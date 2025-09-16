@@ -5,7 +5,6 @@ import { ArrowDown } from 'lucide-react';
 import { USER_DETAILS } from "@/lib/data";
 import { TypedRoles } from "./typed-roles";
 import Link from "next/link";
-import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
