@@ -9,9 +9,8 @@ import { NAV_LINKS, SOCIAL_LINKS, RESUME_URL, USER_DETAILS } from '@/lib/data';
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center justify-between">
-        {/* Left side: Name and Desktop Nav */}
-        <div className="flex items-center">
+      <div className="container flex h-14 items-center">
+        <div className="mr-6 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold">{USER_DETAILS.name}</span>
           </Link>
@@ -28,8 +27,7 @@ export function Header() {
           </nav>
         </div>
 
-        {/* Right side: Social Links and Resume Button (Desktop) */}
-        <div className="hidden md:flex items-center space-x-2">
+        <div className="ml-auto hidden md:flex items-center space-x-2">
           {SOCIAL_LINKS.map((link) => (
             <Button key={link.name} variant="ghost" size="icon" asChild>
               <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
@@ -37,6 +35,9 @@ export function Header() {
               </a>
             </Button>
           ))}
+          <Button asChild variant="outline">
+            <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841" target="_blank" rel="noopener noreferrer">ReimagineAI Newsletter</a>
+          </Button>
           <Button asChild>
             <a href={RESUME_URL} download>Download Resume</a>
           </Button>
@@ -80,6 +81,11 @@ export function Header() {
                         </Button>
                       ))}
                     </div>
+                     <SheetClose asChild>
+                      <Button className="w-full mt-4" asChild>
+                         <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841" target="_blank" rel="noopener noreferrer">ReimagineAI Newsletter</a>
+                      </Button>
+                    </SheetClose>
                      <SheetClose asChild>
                       <Button className="w-full mt-4" asChild>
                         <a href={RESUME_URL} download>Download Resume</a>
