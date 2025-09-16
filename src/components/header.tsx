@@ -40,7 +40,7 @@ export function Header() {
               <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841" target="_blank" rel="noopener noreferrer">ReimagineAI Newsletter</a>
             </Button>
             <Button asChild size="sm" className="whitespace-nowrap">
-              <a href={RESUME_URL} download>Download Resume</a>
+              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">Download Resume</a>
             </Button>
         </div>
 
@@ -93,7 +93,7 @@ export function Header() {
                     </SheetClose>
                      <SheetClose asChild>
                       <Button className="mt-4 w-full" asChild>
-                        <a href={RESUME_URL} download>Download Resume</a>
+                        <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">Download Resume</a>
                       </Button>
                     </SheetClose>
                   </div>
