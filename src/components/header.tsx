@@ -26,55 +26,57 @@ export function Header() {
             ))}
           </nav>
         </div>
-        <div className="flex flex-1 items-center justify-between md:justify-end">
-            <div className="md:hidden">
-                <Sheet>
-                  <SheetTrigger asChild>
-                    <Button variant="ghost" size="icon">
-                      <Menu className="h-5 w-5" />
-                      <span className="sr-only">Toggle Menu</span>
-                    </Button>
-                  </SheetTrigger>
-                  <SheetContent side="left">
-                    <div className="flex flex-col h-full">
-                      <SheetClose asChild>
-                        <Link href="/" className="font-bold border-b pb-4">
-                          {USER_DETAILS.name}
+
+        <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left">
+                <div className="flex flex-col h-full">
+                  <SheetClose asChild>
+                    <Link href="/" className="font-bold border-b pb-4">
+                      {USER_DETAILS.name}
+                    </Link>
+                  </SheetClose>
+                  <nav className="flex flex-col gap-4 py-4">
+                    {NAV_LINKS.map((link) => (
+                      <SheetClose asChild key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="text-lg font-medium"
+                        >
+                          {link.name}
                         </Link>
                       </SheetClose>
-                      <nav className="flex flex-col gap-4 py-4">
-                        {NAV_LINKS.map((link) => (
-                          <SheetClose asChild key={link.href}>
-                            <Link
-                              href={link.href}
-                              className="text-lg font-medium"
-                            >
-                              {link.name}
-                            </Link>
-                          </SheetClose>
-                        ))}
-                      </nav>
-                      <div className="mt-auto border-t pt-4">
-                        <div className="flex items-center justify-center space-x-4">
-                          {SOCIAL_LINKS.map((link) => (
-                            <Button key={link.name} variant="ghost" size="icon" asChild>
-                              <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                                <link.icon className="h-6 w-6" />
-                              </a>
-                            </Button>
-                          ))}
-                        </div>
-                         <SheetClose asChild>
-                          <Button className="w-full mt-4" asChild>
-                            <a href={RESUME_URL} download>Download Resume</a>
-                          </Button>
-                        </SheetClose>
-                      </div>
+                    ))}
+                  </nav>
+                  <div className="mt-auto border-t pt-4">
+                    <div className="flex items-center justify-center space-x-4">
+                      {SOCIAL_LINKS.map((link) => (
+                        <Button key={link.name} variant="ghost" size="icon" asChild>
+                          <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
+                            <link.icon className="h-6 w-6" />
+                          </a>
+                        </Button>
+                      ))}
                     </div>
-                  </SheetContent>
-                </Sheet>
-            </div>
-          <div className="flex items-center space-x-2">
+                     <SheetClose asChild>
+                      <Button className="w-full mt-4" asChild>
+                        <a href={RESUME_URL} download>Download Resume</a>
+                      </Button>
+                    </SheetClose>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+        </div>
+
+        <div className="flex flex-1 items-center justify-end space-x-2">
+          <div className="hidden md:flex items-center space-x-2">
             {SOCIAL_LINKS.map((link) => (
               <Button key={link.name} variant="ghost" size="icon" asChild>
                 <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
