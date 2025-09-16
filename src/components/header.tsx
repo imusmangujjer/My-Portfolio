@@ -10,46 +10,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex w-full h-14 items-center justify-between px-4 md:px-8">
-        <div className="flex items-center">
+        {/* Left Section */}
+        <div className="flex items-center flex-1 md:flex-grow-0">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold">{USER_DETAILS.name}</span>
           </Link>
         </div>
 
-        <nav className="hidden flex-1 items-center justify-center space-x-4 text-sm font-medium md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-muted-foreground transition-colors hover:text-foreground whitespace-nowrap"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden items-center justify-end space-x-2 md:flex">
-            {SOCIAL_LINKS.map((link) => (
-              <Button key={link.name} variant="ghost" size="icon" asChild>
-                <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                  <link.icon className="h-4 w-4" />
-                </a>
-              </Button>
-            ))}
-            <Button asChild variant="outline" size="sm" className="whitespace-nowrap">
-              <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841" target="_blank" rel="noopener noreferrer">ReimagineAI Newsletter</a>
-            </Button>
-            <Button asChild size="sm" className="whitespace-nowrap">
-              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">Download Resume</a>
-            </Button>
-        </div>
-
-
         {/* Mobile Menu */}
-        <div className="flex w-full items-center justify-between md:hidden">
-            <Link href="/" className="font-bold">
-                {USER_DETAILS.name}
-            </Link>
+        <div className="flex items-center md:hidden">
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -100,6 +69,36 @@ export function Header() {
                 </div>
               </SheetContent>
             </Sheet>
+        </div>
+
+        {/* Center Section - Desktop Navigation */}
+        <nav className="hidden flex-1 items-center justify-center space-x-4 text-sm font-medium md:flex">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-muted-foreground transition-colors hover:text-foreground whitespace-nowrap"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Right Section - Social + Resume */}
+        <div className="hidden items-center justify-end space-x-2 md:flex flex-1 md:flex-grow-0">
+            {SOCIAL_LINKS.map((link) => (
+              <Button key={link.name} variant="ghost" size="icon" asChild>
+                <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
+                  <link.icon className="h-4 w-4" />
+                </a>
+              </Button>
+            ))}
+            <Button asChild variant="outline" size="sm" className="whitespace-nowrap">
+              <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841" target="_blank" rel="noopener noreferrer">ReimagineAI Newsletter</a>
+            </Button>
+            <Button asChild size="sm" className="whitespace-nowrap">
+              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">Download Resume</a>
+            </Button>
         </div>
       </div>
     </header>
