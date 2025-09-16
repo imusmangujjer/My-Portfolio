@@ -10,74 +10,21 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex w-full h-14 items-center justify-between px-4 md:px-8">
-        {/* Left Section */}
-        <div className="flex items-center flex-1 md:flex-grow-0">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">{USER_DETAILS.name}</span>
+
+        {/* Left Section - Logo/Name */}
+        <div className="flex flex-1 items-center justify-start">
+          <Link href="/" className="font-bold text-lg">
+            {USER_DETAILS.name}
           </Link>
         </div>
 
-        {/* Mobile Menu */}
-        <div className="flex items-center md:hidden">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle Menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left">
-                <div className="flex h-full flex-col">
-                  <SheetClose asChild>
-                    <Link href="/" className="border-b pb-4 font-bold">
-                      {USER_DETAILS.name}
-                    </Link>
-                  </SheetClose>
-                  <nav className="flex flex-col gap-4 py-4">
-                    {NAV_LINKS.map((link) => (
-                      <SheetClose asChild key={link.href}>
-                        <Link
-                          href={link.href}
-                          className="text-lg font-medium"
-                        >
-                          {link.name}
-                        </Link>
-                      </SheetClose>
-                    ))}
-                  </nav>
-                  <div className="mt-auto border-t pt-4">
-                    <div className="flex items-center justify-center space-x-4">
-                      {SOCIAL_LINKS.map((link) => (
-                        <Button key={link.name} variant="ghost" size="icon" asChild>
-                          <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                            <link.icon className="h-6 w-6" />
-                          </a>
-                        </Button>
-                      ))}
-                    </div>
-                     <SheetClose asChild>
-                      <Button className="mt-4 w-full" asChild>
-                         <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841" target="_blank" rel="noopener noreferrer">ReimagineAI Newsletter</a>
-                      </Button>
-                    </SheetClose>
-                     <SheetClose asChild>
-                      <Button className="mt-4 w-full" asChild>
-                        <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">Download Resume</a>
-                      </Button>
-                    </SheetClose>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
-        </div>
-
         {/* Center Section - Desktop Navigation */}
-        <nav className="hidden flex-1 items-center justify-center space-x-4 text-sm font-medium md:flex">
+        <nav className="hidden md:flex flex-1 justify-center space-x-8 text-sm font-medium">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-muted-foreground transition-colors hover:text-foreground whitespace-nowrap"
+              className="text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
             >
               {link.name}
             </Link>
@@ -85,20 +32,96 @@ export function Header() {
         </nav>
 
         {/* Right Section - Social + Resume */}
-        <div className="hidden items-center justify-end space-x-2 md:flex flex-1 md:flex-grow-0">
-            {SOCIAL_LINKS.map((link) => (
-              <Button key={link.name} variant="ghost" size="icon" asChild>
-                <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                  <link.icon className="h-4 w-4" />
-                </a>
+        <div className="hidden md:flex flex-1 justify-end items-center space-x-4">
+          {SOCIAL_LINKS.map((link) => (
+            <Button key={link.name} variant="ghost" size="icon" asChild>
+              <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
+                <link.icon className="h-4 w-4" />
+              </a>
+            </Button>
+          ))}
+
+          <Button asChild variant="outline" size="sm" className="whitespace-nowrap">
+            <a
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ReimagineAI Newsletter
+            </a>
+          </Button>
+
+          <Button asChild size="sm" className="whitespace-nowrap">
+            <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+              Download Resume
+            </a>
+          </Button>
+        </div>
+
+        {/* Mobile Menu - Shows on small screens */}
+        <div className="flex md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle Menu</span>
               </Button>
-            ))}
-            <Button asChild variant="outline" size="sm" className="whitespace-nowrap">
-              <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841" target="_blank" rel="noopener noreferrer">ReimagineAI Newsletter</a>
-            </Button>
-            <Button asChild size="sm" className="whitespace-nowrap">
-              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">Download Resume</a>
-            </Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+              <div className="flex h-full flex-col">
+                <SheetClose asChild>
+                  <Link href="/" className="border-b pb-4 font-bold">
+                    {USER_DETAILS.name}
+                  </Link>
+                </SheetClose>
+
+                <nav className="flex flex-col gap-4 py-4">
+                  {NAV_LINKS.map((link) => (
+                    <SheetClose asChild key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-lg font-medium"
+                      >
+                        {link.name}
+                      </Link>
+                    </SheetClose>
+                  ))}
+                </nav>
+
+                <div className="mt-auto border-t pt-4">
+                  <div className="flex justify-center space-x-4">
+                    {SOCIAL_LINKS.map((link) => (
+                      <Button key={link.name} variant="ghost" size="icon" asChild>
+                        <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
+                          <link.icon className="h-6 w-6" />
+                        </a>
+                      </Button>
+                    ))}
+                  </div>
+
+                  <SheetClose asChild>
+                    <Button className="mt-4 w-full" asChild>
+                      <a
+                        href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        ReimagineAI Newsletter
+                      </a>
+                    </Button>
+                  </SheetClose>
+
+                  <SheetClose asChild>
+                    <Button className="mt-4 w-full" asChild>
+                      <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+                        Download Resume
+                      </a>
+                    </Button>
+                  </SheetClose>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
