@@ -14,7 +14,7 @@ export const SOCIAL_LINKS = [
   { name: 'GitHub', href: 'https://github.com/imusmangujjer', icon: Github },
 ];
 
-export const RESUME_URL = '/Muhammad Usman Resume-WIndsor Regional Hospital.pdf';
+export const RESUME_URL = '/Muhammad Usman Resume-WIndsor Regional Hospital.htm';
 
 export const USER_DETAILS = {
   name: 'Muhammad Usman',
