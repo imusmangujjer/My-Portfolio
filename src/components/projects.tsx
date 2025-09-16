@@ -84,7 +84,7 @@ export function Projects() {
             </div>
           ))
         ) : (
-          repos.map(repo => <ProjectCard key={repo.id} repo={repo} />)
+          repos.map((repo, index) => <ProjectCard key={repo.id} repo={repo} index={index} />)
         )}
       </div>
     </SectionWrapper>
