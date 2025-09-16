@@ -5,16 +5,24 @@ import { cn } from '@/lib/utils';
 
 type TypedRolesProps = {
   roles: string[];
+  onColorChange: (color: string) => void;
 };
 
-const roleColors = [
-    'text-sky-400',   // Light Blue
-    'text-purple-500', // Purple
-    'text-red-500',    // Red
-    'text-green-500'   // Green
+const textColors = [
+    'text-sky-400',
+    'text-purple-500',
+    'text-red-500',
+    'text-green-500'
 ];
 
-export function TypedRoles({ roles }: TypedRolesProps) {
+const ringColors = [
+    'ring-sky-400',
+    'ring-purple-500',
+    'ring-red-500',
+    'ring-green-500'
+];
+
+export function TypedRoles({ roles, onColorChange }: TypedRolesProps) {
   const [roleIndex, setRoleIndex] = useState(0);
   const [typedRole, setTypedRole] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -24,7 +32,12 @@ export function TypedRoles({ roles }: TypedRolesProps) {
   const delay = 2000;
 
   const currentRole = useMemo(() => roles[roleIndex], [roles, roleIndex]);
-  const currentColor = useMemo(() => roleColors[roleIndex % roleColors.length], [roleIndex]);
+  const currentTextColor = useMemo(() => textColors[roleIndex % textColors.length], [roleIndex]);
+  const currentRingColor = useMemo(() => ringColors[roleIndex % ringColors.length], [roleIndex]);
+
+  useEffect(() => {
+    onColorChange(currentRingColor);
+  }, [currentRingColor, onColorChange]);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -53,9 +66,9 @@ export function TypedRoles({ roles }: TypedRolesProps) {
   }, [typedRole, isDeleting, roles, roleIndex, currentRole]);
 
   return (
-    <span className={cn("transition-colors duration-500", currentColor)}>
+    <span className={cn("transition-colors duration-500", currentTextColor)}>
       {typedRole}
-      <span className={cn("ml-1 animate-pulse transition-colors duration-500", currentColor)}>|</span>
+      <span className={cn("ml-1 animate-pulse transition-colors duration-500", currentTextColor)}>|</span>
     </span>
   );
 }
