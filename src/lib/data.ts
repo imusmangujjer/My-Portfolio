@@ -14,7 +14,7 @@ export const SOCIAL_LINKS = [
   { name: 'GitHub', href: 'https://github.com/imusmangujjer', icon: Github },
 ];
 
-export const RESUME_URL = '/docs/Resume.pdf';
+export const RESUME_URL = '/Resume.pdf';
 
 export const USER_DETAILS = {
   name: 'Muhammad Usman',
