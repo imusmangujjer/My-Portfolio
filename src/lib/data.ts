@@ -18,7 +18,7 @@ export const RESUME_URL = 'https://drive.google.com/file/d/1iqZtaqkqvPcwclFyjYCq
 
 export const USER_DETAILS = {
   name: 'Muhammad Usman',
-  tagline: 'Decision Support Analyst with expertise in data visualization, KPI development, and AI automation.',
+  tagline: 'With expertise in data visualization, KPI development, and AI automation.',
   roles: [
     'Decision Support Analyst',
     'AI Automation Strategist',
