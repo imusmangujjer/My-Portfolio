@@ -8,9 +8,10 @@ type TypedRolesProps = {
 };
 
 const roleColors = [
-    'text-accent', // Red
-    'text-chart-1', // Green
-    'text-primary' // White/Light Grey
+    'text-sky-400',   // Light Blue
+    'text-purple-500', // Purple
+    'text-red-500',    // Red
+    'text-green-500'   // Green
 ];
 
 export function TypedRoles({ roles }: TypedRolesProps) {
