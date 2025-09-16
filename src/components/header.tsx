@@ -10,16 +10,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <div className="mr-6 flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+        <div className="flex items-center">
+          <Link href="/" className="mr-4 flex items-center space-x-2">
             <span className="font-bold">{USER_DETAILS.name}</span>
           </Link>
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground transition-colors hover:text-foreground whitespace-nowrap"
               >
                 {link.name}
               </Link>
@@ -35,10 +35,10 @@ export function Header() {
               </a>
             </Button>
           ))}
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" size="sm">
             <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7331731579062435841" target="_blank" rel="noopener noreferrer">ReimagineAI Newsletter</a>
           </Button>
-          <Button asChild>
+          <Button asChild size="sm">
             <a href={RESUME_URL} download>Download Resume</a>
           </Button>
         </div>
