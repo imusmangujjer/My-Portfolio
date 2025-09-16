@@ -32,10 +32,10 @@ export function Hero() {
           {USER_DETAILS.tagline}
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button asChild size="lg" variant="blue">
             <Link href="#contact">Get In Touch</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="green" size="lg">
             <Link href="#projects">View My Work</Link>
           </Button>
         </div>

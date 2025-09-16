@@ -37,6 +37,15 @@
     --chart-3: 0 0% 60%; /* Grey */
     --chart-4: 120 50% 35%; /* Darker Green */
     --chart-5: 0 60% 40%; /* Darker Red */
+
+    --btn-blue: 217 91% 60%;
+    --btn-blue-foreground: 210 40% 98%;
+    --btn-purple: 262 84% 59%;
+    --btn-purple-foreground: 260 40% 98%;
+    --btn-red: 0 84% 60%;
+    --btn-red-foreground: 0 0% 98%;
+    --btn-green: 142 71% 45%;
+    --btn-green-foreground: 142 90% 98%;
   }
 
   .dark {
@@ -73,6 +82,15 @@
     --chart-3: 0 0% 60%; /* Grey */
     --chart-4: 120 50% 35%; /* Darker Green */
     --chart-5: 0 60% 40%; /* Darker Red */
+
+    --btn-blue: 217 91% 60%;
+    --btn-blue-foreground: 210 40% 98%;
+    --btn-purple: 262 84% 59%;
+    --btn-purple-foreground: 260 40% 98%;
+    --btn-red: 0 84% 60%;
+    --btn-red-foreground: 0 0% 98%;
+    --btn-green: 142 71% 45%;
+    --btn-green-foreground: 142 90% 98%;
   }
 }
 

@@ -18,6 +18,10 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        blue: "bg-[hsl(var(--btn-blue))] text-[hsl(var(--btn-blue-foreground))] hover:bg-[hsl(var(--btn-blue),0.9)]",
+        purple: "bg-[hsl(var(--btn-purple))] text-[hsl(var(--btn-purple-foreground))] hover:bg-[hsl(var(--btn-purple),0.9)]",
+        red: "bg-[hsl(var(--btn-red))] text-[hsl(var(--btn-red-foreground))] hover:bg-[hsl(var(--btn-red),0.9)]",
+        green: "bg-[hsl(var(--btn-green))] text-[hsl(var(--btn-green-foreground))] hover:bg-[hsl(var(--btn-green),0.9)]",
       },
       size: {
         default: "h-10 px-4 py-2",
