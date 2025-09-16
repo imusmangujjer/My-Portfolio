@@ -1,10 +1,17 @@
 "use client";
 
 import { useState, useEffect, useMemo } from 'react';
+import { cn } from '@/lib/utils';
 
 type TypedRolesProps = {
   roles: string[];
 };
+
+const roleColors = [
+    'text-accent', // Red
+    'text-chart-1', // Green
+    'text-primary' // White/Light Grey
+];
 
 export function TypedRoles({ roles }: TypedRolesProps) {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -16,6 +23,7 @@ export function TypedRoles({ roles }: TypedRolesProps) {
   const delay = 2000;
 
   const currentRole = useMemo(() => roles[roleIndex], [roles, roleIndex]);
+  const currentColor = useMemo(() => roleColors[roleIndex % roleColors.length], [roleIndex]);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -44,9 +52,9 @@ export function TypedRoles({ roles }: TypedRolesProps) {
   }, [typedRole, isDeleting, roles, roleIndex, currentRole]);
 
   return (
-    <span className="text-accent">
+    <span className={cn("transition-colors duration-500", currentColor)}>
       {typedRole}
-      <span className="ml-1 animate-pulse text-accent">|</span>
+      <span className={cn("ml-1 animate-pulse transition-colors duration-500", currentColor)}>|</span>
     </span>
   );
 }
