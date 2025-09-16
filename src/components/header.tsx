@@ -10,11 +10,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
+        <div className="mr-4 hidden md:flex">
+          <Link href="/" className="mr-6 flex items-center space-x-2">
+            <span className="font-bold">{USER_DETAILS.name}</span>
+          </Link>
+        </div>
+
         <div className="flex flex-1 items-center justify-center">
-          <div className="flex items-center">
-            <Link href="/" className="mr-6 flex items-center space-x-2">
-              <span className="font-bold">{USER_DETAILS.name}</span>
-            </Link>
             <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
               {NAV_LINKS.map((link) => (
                 <Link
@@ -26,9 +28,9 @@ export function Header() {
                 </Link>
               ))}
             </nav>
-          </div>
+        </div>
 
-          <div className="ml-auto hidden md:flex items-center space-x-2">
+        <div className="hidden md:flex items-center justify-end space-x-2">
             {SOCIAL_LINKS.map((link) => (
               <Button key={link.name} variant="ghost" size="icon" asChild>
                 <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
@@ -42,11 +44,14 @@ export function Header() {
             <Button asChild size="sm">
               <a href={RESUME_URL} download>Download Resume</a>
             </Button>
-          </div>
         </div>
 
+
         {/* Mobile Menu */}
-        <div className="ml-auto flex items-center md:hidden">
+        <div className="flex w-full items-center justify-between md:hidden">
+            <Link href="/" className="font-bold">
+                {USER_DETAILS.name}
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
