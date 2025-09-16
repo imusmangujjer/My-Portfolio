@@ -99,6 +99,14 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground bg-acrylic;
+  }
+}
+
+@layer utilities {
+  .bg-acrylic {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
   }
 }
