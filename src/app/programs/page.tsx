@@ -21,12 +21,12 @@ export default function ProgramsPage() {
             <Card className="w-full max-w-lg text-left">
               <CardHeader>
                 <CardTitle className="text-2xl">
-                  AI Product Management for High School Innovators 🧠💡
+                  AI Product Managemnet 🧠💡
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-6">
-                  Learn to imagine, design, and build ethical AI products — no coding required.
+                  Embark on an exciting 7-week journey into the world of product thinking and AI design!
                 </p>
                 <Button className="w-full" size="lg">
                   Begin
