@@ -12,6 +12,15 @@ const sessions = [
     location: 'Académie Ste-Cécile International School',
     attendees: 'TBD',
   },
+  {
+    date: {
+      month: 'SEP',
+      day: 27,
+    },
+    title: 'Build Web Apps with Vibe Coding',
+    location: 'Communitech, Kitchener',
+    attendees: '130+',
+  },
 ];
 
 export default function SessionsPage() {
