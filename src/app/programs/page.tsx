@@ -2,26 +2,38 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { ArrowLeft } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function ProgramsPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
-      <main className="flex-1 flex items-center justify-center">
-        <div className="container py-16 text-center md:py-24">
+      <main className="flex-1 flex flex-col items-center justify-center p-4">
+        <div className="w-full max-w-4xl py-16 text-center md:py-24">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Programs Coming Soon
+            Programs
           </h1>
-          <p className="mt-6 text-lg text-muted-foreground">
-            I'm developing some exciting programs. Check back later!
+          <p className="mt-4 text-lg text-muted-foreground">
+            Explore the programs designed to empower the next generation of innovators.
           </p>
-          <Button asChild className="mt-8">
-            <Link href="/">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Go Back Home
-            </Link>
-          </Button>
+          
+          <div className="mt-12 flex justify-center">
+            <Card className="w-full max-w-lg text-left">
+              <CardHeader>
+                <CardTitle className="text-2xl">
+                  AI Product Management for High School Innovators 🧠💡
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-6">
+                  Learn to imagine, design, and build ethical AI products — no coding required.
+                </p>
+                <Button className="w-full" size="lg">
+                  Begin
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
       <Footer />
