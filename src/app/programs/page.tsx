@@ -8,7 +8,7 @@ export default function ProgramsPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 flex items-center justify-center">
         <div className="container py-16 text-center md:py-24">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Programs Coming Soon
