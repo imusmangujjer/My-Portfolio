@@ -28,7 +28,7 @@ export default function ProgramsPage() {
                 <p className="text-muted-foreground mb-6">
                   Embark on an exciting 7-week journey into the world of product thinking and AI design!
                 </p>
-                <Button className="w-full" size="lg" asChild>
+                <Button size="sm" variant="green" asChild>
                   <a href="https://app.mindsmith.ai/learn/cmgqq84b902eajo041i11jhez" target="_blank" rel="noopener noreferrer">
                     Begin
                   </a>
