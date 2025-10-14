@@ -18,7 +18,7 @@ export default function ProgramsPage() {
           </p>
           
           <div className="mt-12 flex justify-center">
-            <Card className="w-full max-w-lg text-left">
+            <Card className="w-full max-w-lg text-center">
               <CardHeader>
                 <CardTitle className="text-2xl">
                   AI Product Managemnet 🧠💡
